@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+    overflow-x: hidden;
+}
+@keyframes transisiManual {
+    0% {
+      transform: translateX(-100%);
+      background:linear-gradient(to bottom, red 50%, white 50%)
+    }
+    50% {
+      transform: translateX(0);
+      background:linear-gradient(to bottom, red 50%, white 50%)
+    }
+    100%{
+        transform: translateX(100%);
+        background:linear-gradient(to bottom, red 50%, white 50%)
+    }
+   
+  } 
+  .container {
+    animation-duration: 4s;
+    width: 100%;
+height: 100vh;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-name: transisiManual;
+        z-index: 999;
+       
+}
+
+.penjajah{
+  width: 100%;
+  height: 100vh;
+  animation: opacityManual 6s ease-in alternate;
+  font-family: 'Gabriela', serif;
+  color:white;
+  position: absolute;
+  top:0;
+  left: 0;
+
+}
+
+.text-penjajah{
+    color:white;
+    font-size : 30px;
+}
+
+@keyframes opacityManual {
+
+    0% { opacity: 0; }
+    50% 
+    { opacity: 0.0; }
+    100% {opacity : 1}
+}
+@keyframes bottom { 
+    0% {
+        margin-top: 23px;
+      }
+      100% {
+        margin-top: 0;
+      }
+}
+.container-penjajah{
+  overflow-y: hidden;
+    width:100%;
+    height:80px;
+    text-align: center;
+    padding-top:30px;
+    animation: bottom 2s ease-in alternate;
+
+}
+.container-home { 
+  width: 90%;
+  margin-top:40px;
+  margin:0 auto;
+  height:80%;
+}
+.text{
+  padding:20px 20px;
+  font-size:20px
+}
+.text-container {
+  margin-top:20px;
+
+}
+.container-text{ 
+  display:flex;
+    
+}
+.text-indo{
+  width:50%;
+  margin-right:20px;
+  height:300px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  position: relative;
+  margin-top: 5%;
+}
+.text-indo h2 {  
+  width: 100%;
+  font-size: 18px;
+  position: absolute;
+ animation : textBerjalan 5s ease-in alternate;
+
+}
+@keyframes textBerjalan {
+  0% {
+    right: 0px;
+    
+  }
+  50% {
+    right: 100%;
+  }
+  100% {
+    right: 0;    
+  }
+}
+.container-image{
+  width:50%;
+  margin-left:50px;
+}
+.container-image img{
+  border-radius: 20px;
+  
+ 
+}
+.container-about{
+  width:90%;
+  max-height:70%;
+  margin:auto;
+}
+
+.container-about h1{
+  text-align: center;
+}
+.container-card{
+  margin-top:40px;
+  width:100%;
+  display: flex;
+  justify-content:space-around;
+}
+.card{
+  background-color:white;
+  width:300px;
+  border-radius: 50px;
+  height:400px;
+}
+.card img{
+  width:100%;
+  display:block;
+  height: 70%;
+  margin: 0 auto;
+}
+.card h2{
+  text-align: center;
+  padding-top:20px;
+  color:black;
+  background-color:white;
+}
+.card h3{
+  text-align: center;
+  color:black;
+  background-color:white
+}
+
+@media only screen and (max-height : 700px){
+  .container-about{
+    overflow-y : hidden
+  }
+}
